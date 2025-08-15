@@ -60,13 +60,13 @@ This dataset contains sentences with a classification of emotion.
 
 ## Test with different hyperparameter
 
-Test with different hyperparameter "learning rate", "dropout" and LoRA parameter "r", "weight decay" had mostly similar accuracy. Only a too high learning rate gave a low accuracy of 0.35.
+Test with different hyperparameter "learning rate", "dropout" and LoRA parameter "r", "weight decay" had mostly similar accuracy. Only a too high learning rate gave a low accuracy of 0.3.
 
 ## Result
 
-Using LoRA for fine-tuning the GPT2 gave a much better result than just adding a classification head to a pretrained GPT2. The accuracy on the test set is increased from 0.58 to 0.93.
+Using LoRA for fine-tuning the GPT2 gave a much better result than just adding a classification head to a pretrained GPT2. The accuracy on the test set is increased from 0.54 to 0.93.
 
-Different hyperparameter mostly didn't change too much on the result, so the initial parameters were already a good choice.
+Different hyperparameter mostly didn't change too much on the result, so the initial parameters were already a good choice. Too small learning rate gave a lower accuracy but with more epochs it should give also good results.
 
 With QLoRA the memory consumption could be decreased so even larger models can be trained with the limited GPU memory resource. In this case, the result was comparable with the model with full quantization.
 
